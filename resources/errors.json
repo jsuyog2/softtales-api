@@ -43,7 +43,7 @@
     "email_verified_message": "Email is already Verified. Login to your account.",
     "email_not_verified": "Email is not Verified",
     "email_not_verified_message": "Please verify your Email.",
-    "username_exist":"Username already exists",
+    "product_exist":"Product already exists",
     "username_not_exit":"Username Available",
     "reach_limit":"You Reach Your Limit",
     "image_not_valid":"Profile Pic is not Valid",
@@ -55,5 +55,8 @@
     "page_not_found":"Page not found",
     "query_not_found":"query not found",
     "success_page_update":"Update Page Details Successfully",
-    "unauthorized_message":"You are not authorized to access this page"
+    "unauthorized_message":"You are not authorized to access this page",
+    "product_added":"Product added Successfully",
+    "product_not_added":"Product not added",
+    "image_not_found":"Image not found"
 }

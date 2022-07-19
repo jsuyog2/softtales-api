@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AddProduct;
 use App\Http\Controllers\GetBanner;
+use App\Http\Controllers\GetProductImage;
+use App\Http\Controllers\GetProductList;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\Logout;
 use App\Http\Controllers\Register;
@@ -28,11 +31,14 @@ Route::middleware([StoreTime::class])->group(function () {
     Route::post('/register', [Register::class, 'register']);
     Route::post('/login', [Login::class, 'login']);
     Route::get('/verify', [Verify::class, 'verify']);
-    Route::get('/getBanner/{id}', [GetBanner::class, 'getBanner']);
+    Route::get('/get_product_list', [GetProductList::class, 'getProductList']);
+    Route::get('/get_banner/{id}', [GetBanner::class, 'getBanner']);
+    Route::get('/get_product_image/{product_id}/{value}', [GetProductImage::class, 'getProductImage']);
     Route::middleware([VerifyJwtToken::class])->group(function () {
-        Route::get('/userresponse', [UserResponse::class, 'userResponse']);
+        Route::get('/user_response', [UserResponse::class, 'userResponse']);
         Route::get('/logout', [Logout::class, 'logout']);
-        Route::post('/setBanner', [SetBanner::class, 'setBanner']);
+        Route::post('/set_banner', [SetBanner::class, 'setBanner']);
+        Route::post('/add_product', [AddProduct::class, 'addProduct']);
 
         // Route::post('/set_user', [SetUser::class, 'setUser']);
         // Route::post('/update_page_details', [UpdatePageDetails::class, 'UpdatePageDetails']);
